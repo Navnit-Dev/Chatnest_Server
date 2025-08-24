@@ -24,7 +24,7 @@ app.use(cors({ origin: '*', methods: ['GET', 'POST'] }));
 // ✅ Create socket server
 const io = new Server(server, {
   cors: {
-    origin: process.env.FRONTEND_URL,
+    origin: "*",
     methods: ['GET', 'POST'],
   },
 });
@@ -148,3 +148,4 @@ const PORT = 3001;
 server.listen(PORT, () => {
   console.log(`🚀 Socket.IO server running `);
 });
+
